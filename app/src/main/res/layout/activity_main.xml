@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,8 +12,9 @@
         android:layout_height="match_parent"
         android:id="@+id/navHost"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/activity_nav"
+        app:navGraph="@navigation/nav_graph"
         android:name="androidx.navigation.fragment.NavHostFragment"
-        tools:ignore="MissingClass"></fragment>
+        ></fragment>
 
 </LinearLayout>
+    </layout>

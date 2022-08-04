@@ -1,11 +1,14 @@
 package com.star.fragmentlifecycle
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
+import com.star.fragmentlifecycle.databinding.FragmentFirstBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -19,8 +22,9 @@ private const val ARG_PARAM2 = "param2"
  */
 class FirstFragment : Fragment() {
     override fun onAttach(context: Context){
-       Toast.makeText (mainActivity,resources.getString(R.string.onAttach_fragment),Toast.LENGTH_LONG).show()
-    super.onAttach(context)
+        super.onAttach(context)
+        mainActivity = activity as MainActivity
+        Toast.makeText (mainActivity,resources.getString(R.string.onAttach_fragment),Toast.LENGTH_LONG).show()
 }
 //TODO:Rename and change types of parameters
        private var param1: String? = null
@@ -29,9 +33,9 @@ class FirstFragment : Fragment() {
     lateinit var mainActivity:MainActivity
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Toast.makeText (mainActivity,resources.getString(R.string.oncreate_fragment),Toast.LENGTH_LONG).show()
         super.onCreate(savedInstanceState)
 
+        Toast.makeText (mainActivity,resources.getString(R.string.oncreate_fragment),Toast.LENGTH_LONG).show()
 
     }
 
